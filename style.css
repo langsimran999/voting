@@ -1,0 +1,133 @@
+:root {
+    --main-bg: #f7f9fa;
+    --header-bg: #02577a;
+    --accent: #028090;
+    --block-bg: #f3f3f3;
+    --border: #cce3e6;
+    --success: #4caf50;
+    --error: #f44336;
+    --info: #2196f3;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--main-bg);
+    color: #222;
+}
+
+#main-container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(2, 87, 122, 0.15);
+    padding: 24px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header-bg);
+    color: #fff;
+    padding: 18px 24px;
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+section {
+    margin: 30px 0 0 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    font-size: 1em;
+}
+
+button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #03687a;
+}
+
+.error {
+    color: var(--error);
+    margin-top: 8px;
+}
+
+.info {
+    color: var(--info);
+    margin-top: 8px;
+}
+
+#vote-count {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 18px;
+}
+
+#vote-count li {
+    font-size: 1.2em;
+    background: var(--block-bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+#blockchain-log {
+    max-height: 300px;
+    overflow-y: auto;
+    background: #fcfcfc;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    padding: 12px;
+    font-family: monospace;
+    font-size: 0.98em;
+}
+
+.block {
+    background: #e8f6fc;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    border-left: 4px solid var(--accent);
+}
+
+@media (max-width: 600px) {
+    #main-container {
+        max-width: 99vw;
+        padding: 10px;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 10px;
+    }
+    #vote-count {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

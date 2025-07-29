@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting Chain - Blockchain Voting Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-container">
+        <header>
+            <h1>Voting Chain</h1>
+            <div id="user-section">
+                <span id="user-info"></span>
+                <button id="logout-btn" style="display:none;">Logout</button>
+            </div>
+        </header>
+        <section id="auth-section">
+            <h2>Login/Register</h2>
+            <form id="auth-form" autocomplete="off">
+                <input type="text" id="username" placeholder="Username" required minlength="3" maxlength="15">
+                <input type="password" id="password" placeholder="Password" required minlength="3" maxlength="15">
+                <button type="submit">Login / Register</button>
+            </form>
+            <div id="auth-error" class="error"></div>
+        </section>
+        <section id="voting-section" style="display:none;">
+            <h2>Cast Your Vote</h2>
+            <form id="voting-form" autocomplete="off">
+                <label>
+                    Select Candidate:
+                    <select id="candidate" required>
+                        <option value="">--Choose--</option>
+                        <option value="ashriya">ashriya</option>
+                        <option value="nilisha">nilisha</option>
+                        <option value="prapti">prapti</option>
+                        <option value="ayushna">ayushna</option>
+                    </select>
+                </label>
+                <button type="submit">Vote</button>
+            </form>
+            <div id="vote-error" class="error"></div>
+            <div id="already-voted" class="info"></div>
+        </section>
+        <section id="results-section" style="display:none;">
+            <h2>Live Vote Count</h2>
+            <ul id="vote-count"></ul>
+        </section>
+        <section id="blockchain-section" style="display:none;">
+            <h2>Transparency Log (Blockchain)</h2>
+            <div id="blockchain-log"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
